@@ -1,0 +1,105 @@
+
+// To view the default settings, hold "alt" while clicking on the "Settings" button.
+// For documentation on these settings, see: https://aka.ms/terminal-documentation
+
+{
+    "$schema": "https://aka.ms/terminal-profiles-schema",
+	"alwaysShowTabs": true,
+    "defaultProfile": "{61c54bbd-c2c6-5271-96e7-009a87ff44bf}",
+    "initialCols": 100,
+    "initialRows": 30,
+    "requestedTheme": "system",
+    "showTabsInTitlebar": true,
+    "showTerminalTitleInTitlebar": true,
+    "tabWidthMode": "equal",
+    "snapToGridOnResize": true,
+    "wordDelimiters": " /\\()\"'-.,:;<>~!@#$%^&*|+=[]{}~?\u2502",
+    "confirmCloseAllTabs": false,
+
+    "profiles":
+    {
+        "defaults":
+        {
+			"fontFace": "Sarasa Mono T TC",
+			"fontSize": 14,
+			"backgroundImage": "C:\\GitHub\\InDesign\\src\\pics\\om_dark_x128.png",
+			"backgroundImageAlignment": "center",
+			"backgroundImageStretchMode": "none",
+			"backgroundImageOpacity": 0.25,
+			"colorScheme": "One More Dark",
+            "closeOnExit": true,
+            "cursorShape": "emptyBox"
+        },
+        "list":
+        [
+            {
+                "guid": "{61c54bbd-c2c6-5271-96e7-009a87ff44bf}",
+                "name": "Windows PowerShell",
+                "startingDirectory": "C:\\Github",
+                "commandline": "powershell.exe",
+                "hidden": false
+            },
+            {
+                "guid": "{0caa0dad-35be-5f56-a8ff-afceeeaa6101}",
+                "name": "cmd",
+                "commandline": "cmd.exe",
+                "hidden": false
+            },
+			{
+                "guid": "{60254CA5-953B-11CF-8C96-00AA00B8708C}",
+                "name": "Git",
+				"commandline": "C:\\Program Files\\Git\\bin\\bash.exe",
+				"startingDirectory": "C:\\Github",
+				"icon": "C:\\Program Files\\Git\\mingw64\\share\\git\\git-for-windows.ico"
+			},
+			{
+                "guid": "{BEA218D2-6950-497B-9434-61683EC065FE}",
+                "name": "Python",
+				"commandline": "C:\\Program Files\\Python\\3.8.2\\python.exe",
+				"startingDirectory": "C:\\Github\\MINEWORLDY",
+				"icon": "C:\\Program Files\\Python\\3.8.2\\DLLs\\pyc.ico"
+            },
+            {
+                "guid": "{b453ae62-4e3d-5e58-b989-0a998ec441b8}",
+                "hidden": false,
+                "name": "Azure Cloud Shell",
+                "source": "Windows.Terminal.Azure",
+				"closeOnExit": true
+            }
+        ]
+    },
+
+    "schemes": [
+		{
+            "name": "One More Dark",
+
+            "foreground": "#DCDFE4",
+            "background": "#1E1E1E",
+
+            "cursorColor": "#FFFFFF",
+            "selectionBackground": "#D4D4D4",
+
+            "black": "#1E1E1E",
+            "red": "#CC6666",
+            "green": "#8FCC66",
+            "yellow": "#CCB866",
+            "blue": "#66B8CC",
+            "purple": "#B866CC",
+            "cyan": "#66CCB8",
+            "white": "#999999",
+
+            "brightBlack": "#666666",
+            "brightRed": "#FF8080",
+            "brightGreen": "#B2FF80",
+            "brightYellow": "#FFE680",
+            "brightBlue": "#80E5FF",
+            "brightPurple": "#E680FF",
+            "brightCyan": "#80FFE5",
+            "brightWhite": "#EFEFEF"
+        }
+	],
+
+    // Add any keybinding overrides to this array.
+    // To unbind a default keybinding, set the command to "unbound"
+    "keybindings": []
+}

@@ -7,25 +7,25 @@ function Write-Theme {
         [string]
         $with
     )
-    $prompt += Write-Prompt -Object "╭─" -ForegroundColor $sl.Colors.PromptForegroundColor
-	$prompt += Write-Prompt -Object "╼" -ForegroundColor $sl.Colors.PromptIndicatorColor3
-	$prompt += Write-Prompt -Object "━" -ForegroundColor $sl.Colors.PromptIndicatorColor1
-	$prompt += Write-Prompt -Object "╾" -ForegroundColor $sl.Colors.PromptIndicatorColor2
+    $prompt += Write-Prompt -Object "╭┨" -ForegroundColor $sl.Colors.GitForegroundColor -BackgroundColor $sl.Colors.PromptBackgroundColor
+	$prompt += Write-Prompt -Object "❮" -ForegroundColor $sl.Colors.GitForegroundColor -BackgroundColor $sl.Colors.PromptIndicatorColor1
+	$prompt += Write-Prompt -Object "❮" -ForegroundColor $sl.Colors.GitForegroundColor -BackgroundColor $sl.Colors.PromptIndicatorColor2
+	$prompt += Write-Prompt -Object "❮" -ForegroundColor $sl.Colors.GitForegroundColor -BackgroundColor $sl.Colors.PromptIndicatorColor3
     If (Test-Administrator) {
-        $prompt += Write-Prompt -Object " ❖  " -ForegroundColor $sl.Colors.AdminIconForegroundColor -BackgroundColor $sl.Colors.AdminIconBackgroundColor
+        $prompt += Write-Prompt -Object " ⍬ " -ForegroundColor $sl.Colors.AdminIconForegroundColor -BackgroundColor $sl.Colors.AdminIconBackgroundColor
     } else {
-        $prompt += Write-Prompt -Object " ❖  " -ForegroundColor $sl.Colors.PromptForegroundColor -BackgroundColor $sl.Colors.AdminIconBackgroundColor
+        $prompt += Write-Prompt -Object " ⍬ " -ForegroundColor $sl.Colors.GitForegroundColor -BackgroundColor $sl.Colors.AdminIconBackgroundColor
     }
     $user = [System.Environment]::UserName
     $computer = [System.Environment]::MachineName
-    $path = Get-ShortPath -dir $pwd
+    $path = Get-FullPath -dir $pwd
     if (Test-NotDefaultUser($user)) {
         $prompt += Write-Prompt -Object " $user@$computer " -ForegroundColor $sl.Colors.PromptForegroundColor -BackgroundColor $sl.Colors.PromptBackgroundColor
     }
     if (Test-VirtualEnv) {
         $prompt += Write-Prompt -Object " ⭓ $(Get-VirtualEnvName) " -ForegroundColor $sl.Colors.PromptForegroundColor -BackgroundColor $sl.Colors.VirtualEnvBackgroundColor
     }
-    $prompt += Write-Prompt -Object " $path " -ForegroundColor $sl.Colors.PromptForegroundColor -BackgroundColor $sl.Colors.PromptIndicatorColor2
+    $prompt += Write-Prompt -Object " $path " -ForegroundColor $sl.Colors.GitForegroundColor -BackgroundColor $sl.Colors.PathBackgroundColor
     $status = Get-VCSStatus
     if ($status) {
         $themeInfo = Get-VcsInfo -status ($status)
@@ -45,25 +45,25 @@ function Write-Theme {
         $prompt += Write-Prompt -Object "$($with.ToUpper()) " -BackgroundColor $sl.Colors.WithBackgroundColor -ForegroundColor $sl.Colors.PromptForegroundColor
     }
     $prompt += Write-Prompt -Object "╰┨" -ForegroundColor $sl.Colors.PromptForegroundColor
-    $prompt += Write-Prompt -Object "❯" -ForegroundColor $sl.Colors.PromptIndicatorColor3
     $prompt += Write-Prompt -Object "❯" -ForegroundColor $sl.Colors.PromptIndicatorColor1
     $prompt += Write-Prompt -Object "❯" -ForegroundColor $sl.Colors.PromptIndicatorColor2
+    $prompt += Write-Prompt -Object "❯" -ForegroundColor $sl.Colors.PromptIndicatorColor3
     $prompt += ' '
     $prompt
 }
 $sl = $global:ThemeSettings #local settings
-$sl.PromptSymbols.FailedCommandSymbol = [char]::ConvertFromUtf32(0x2718) #2B22 2B53
-$sl.PromptSymbols.SuccessCommandSymbol = [char]::ConvertFromUtf32(0x2714)
-$sl.Colors.AdminIconForegroundColor = [ConsoleColor]::Red
-$sl.Colors.AdminIconBackgroundColor = [ConsoleColor]::DarkGreen
-$sl.Colors.PromptForegroundColor = [ConsoleColor]::White
-$sl.Colors.PromptBackgroundColor = [ConsoleColor]::DarkGray
-$sl.Colors.GitForegroundColor = [ConsoleColor]::Black
-$sl.Colors.WithBackgroundColor = [ConsoleColor]::DarkMagenta
-$sl.Colors.VirtualEnvBackgroundColor = [System.ConsoleColor]::DarkRed
-$sl.Colors.CommandSuccessIconForegroundColor = [System.ConsoleColor]::Green
-$sl.Colors.CommandFailedIconForegroundColor = [System.ConsoleColor]::Red
-$sl.Colors.PromptIndicatorColor1 = [ConsoleColor]::Green
-$sl.Colors.PromptIndicatorColor2 = [ConsoleColor]::DarkCyan
-$sl.Colors.PromptIndicatorColor3 = [ConsoleColor]::Yellow
-$sl.Colors.TimeStampForegroundColor = [ConsoleColor]::Magenta
+
+$sl.PromptSymbols.FailedCommandSymbol        = [char]::ConvertFromUtf32(0x2718)
+$sl.PromptSymbols.SuccessCommandSymbol       = [char]::ConvertFromUtf32(0x2714)
+
+$sl.Colors.PromptBackgroundColor             = [ConsoleColor]::DarkGray
+$sl.Colors.PathBackgroundColor               = [ConsoleColor]::DarkCyan
+$sl.Colors.AdminIconForegroundColor          = [ConsoleColor]::Red
+$sl.Colors.AdminIconBackgroundColor          = [ConsoleColor]::DarkGreen
+$sl.Colors.VirtualEnvBackgroundColor         = [ConsoleColor]::DarkMagenta
+$sl.Colors.CommandFailedIconForegroundColor  = [ConsoleColor]::Red
+$sl.Colors.CommandSuccessIconForegroundColor = [ConsoleColor]::Green
+$sl.Colors.PromptIndicatorColor1             = [ConsoleColor]::Yellow
+$sl.Colors.PromptIndicatorColor2             = [ConsoleColor]::Green
+$sl.Colors.PromptIndicatorColor3             = [ConsoleColor]::Cyan
+$sl.Colors.TimeStampForegroundColor          = [ConsoleColor]::Magenta

@@ -1,8 +1,8 @@
-# InDesign
+# InDesign 🔴🟠🟡🟢🔵🟣🟤
 
 Beautifying on Windows 10 & Designs  |  基于 Win10 的美化及设计
 
-🔴🟠🟡🟢🔵🟣🟤 ⒷⒺⒶⓊⓉⓎ ⒾⓈ ⓅⓇⓄⒹⓊⒸⓉⒾⓋⒾⓉⓎ 🔴🟠🟡🟢🔵🟣🟤
+ⒷⒺⒶⓊⓉⓎ ⒾⓈ ⓅⓇⓄⒹⓊⒸⓉⒾⓋⒾⓉⓎ
 
 ## 索引
 
@@ -26,6 +26,10 @@ Beautifying on Windows 10 & Designs  |  基于 Win10 的美化及设计
 
 4. [Windows Terminal](https://github.com/Moenupa/InDesign/tree/master/windows%20terminal)
 
+> 终端字体推荐和分析
+>
+> Fonts in Terminal: Recommendation and Analysis
+>
 > 设置和自定义
 >
 > Settings and Personalization
