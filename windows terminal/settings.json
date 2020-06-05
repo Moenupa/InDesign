@@ -73,7 +73,7 @@
 		{
             "name": "One More Dark",
 
-            "foreground": "#DCDFE4",
+            "foreground": "#D4D4D4",
             "background": "#1E1E1E",
 
             "cursorColor": "#FFFFFF",
@@ -99,7 +99,5 @@
         }
 	],
 
-    // Add any keybinding overrides to this array.
-    // To unbind a default keybinding, set the command to "unbound"
     "keybindings": []
 }
