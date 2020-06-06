@@ -3,17 +3,21 @@
 
 ## 索引 | Contents
 
-> 🟤 [引入 | Intro]()
-> 🔴 [整体配色 | Color Theme]()
->> 🟠 [改变配色步骤]() | [Color Theme Configuration Method]()
->> 🟡 [配色效果 | Color Theme Results]()
->> [其他配色方案 | Other Themes]()
-> 🟢 [Markdown 优化 | Markdown Support]()
->> 🔵 [优化步骤]() | [Set-Up Steps]()
->> 🟣 [优化效果 | Support Results]()
->> [其他配色方案对应的优化文件 | Corresponding XML Files in Other Themes]()
+> 🟤 [引入 | Intro](https://github.com/Moenupa/InDesign/tree/master/notepad%2B%2B#%E5%BC%95%E5%85%A5--intro)  
+> 🔴 [整体配色 | Color Theme](https://github.com/Moenupa/InDesign/tree/master/notepad%2B%2B#%E6%95%B4%E4%BD%93%E9%85%8D%E8%89%B2--color-theme)  
+>> 🟠 [CN: 改变配色步骤](https://github.com/Moenupa/InDesign/tree/master/notepad%2B%2B#%E6%94%B9%E5%8F%98%E9%85%8D%E8%89%B2%E6%AD%A5%E9%AA%A4) | [EN: Color Theme Configuration Method](https://github.com/Moenupa/InDesign/tree/master/notepad%2B%2B#color-theme-configuration-method)  
+>> 🟡 [配色效果 | Color Theme Results](https://github.com/Moenupa/InDesign/tree/master/notepad%2B%2B#%E9%85%8D%E8%89%B2%E6%95%88%E6%9E%9C--color-theme-results)  
+>> [其他配色方案 | Other Themes](https://github.com/Moenupa/InDesign/tree/master/notepad%2B%2B#%E5%85%B6%E4%BB%96%E9%85%8D%E8%89%B2%E6%96%B9%E6%A1%88--other-themes)  
+> 🟢 [Markdown 优化 | Markdown Support](https://github.com/Moenupa/InDesign/tree/master/notepad%2B%2B#markdown-%E4%BC%98%E5%8C%96--markdown-support)  
+>> 🔵 [CN: 优化步骤](https://github.com/Moenupa/InDesign/tree/master/notepad%2B%2B#%E4%BC%98%E5%8C%96%E6%AD%A5%E9%AA%A4) | [EN: Set-Up Steps](https://github.com/Moenupa/InDesign/tree/master/notepad%2B%2B#set-up-steps)  
+>> 🟣 [优化效果 | Support Results](https://github.com/Moenupa/InDesign/tree/master/notepad%2B%2B#%E4%BC%98%E5%8C%96%E6%95%88%E6%9E%9C--support-results)  
+>> [其他配色方案对应的优化文件 | Corresponding XML Files in Other Themes](https://github.com/Moenupa/InDesign/tree/master/notepad%2B%2B#%E5%85%B6%E4%BB%96%E9%85%8D%E8%89%B2%E6%96%B9%E6%A1%88%E5%AF%B9%E5%BA%94%E7%9A%84%E4%BC%98%E5%8C%96%E6%96%87%E4%BB%B6--corresponding-xml-files-in-other-themes)
 
 ## 引入 | Intro
+
+Notepad++ 是 Win 10 系统内著名垃圾“记事本”的替代品，占用少，插件多，但是在作为 IDE 时不是特别方便。建议作为日常文本编辑器使用，可以代替 Word 处理文本。
+
+Notepad++ is the substitute for the famous trash app in Windows 10 system: "Notepad", with little memory influence and multiple plug-ins, but very handy hen used as IDE. Therefore, I recommend to use Notepad++ as a daily-purpose text editor, to replace Word in processing with normal texts.
 
 ## 整体配色 | Color Theme
 
