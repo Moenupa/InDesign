@@ -4,7 +4,7 @@ Beautifying on Windows 10 & Designs  |  基于 Win10 的美化及设计
 
 ⒷⒺⒶⓊⓉⓎ ⒾⓈ ⓅⓇⓄⒹⓊⒸⓉⒾⓋⒾⓉⓎ
 
-🔴IDEs 🟠Terminals 🟡System Interface 🟢Designs 🔵Logic 🟣Built-In  🟤Others
+🔴IDEs 🟠Terminals 🟡System Interface 🟢Designs 🔵Principles 🟣Built-In  🟤Others
 
 ## 索引 | Contents
 
@@ -28,8 +28,7 @@ Beautifying on Windows 10 & Designs  |  基于 Win10 的美化及设计
 4. 🟠 [Windows Terminal](https://github.com/Moenupa/InDesign/tree/master/windows%20terminal)
 
 > 终端字体推荐和分析  
-> Fonts in Terminal: Recommendation and Analysis
->
+> Fonts in Terminal: Recommendation and Analysis  
 > 设置和自定义  
 > Settings and Personalization
 
@@ -53,7 +52,7 @@ So long as a beautifying effort, there are inevitable performance loss as costs.
 
 I will for specify on this point from my user-experience for illustration, solely for your reference and decision.
 
-## 设计思路 | Designs
+## 设计思路 | Design Principles
 
 目前仅支持深色模式，浅色背景还在测试调色阶段。
 

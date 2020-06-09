@@ -4,9 +4,8 @@
 
 > 🔴 [字体，字体大小和颜色 | Fonts, Size and Colors](https://github.com/Moenupa/InDesign/tree/master/powershell#%E5%AD%97%E4%BD%93%E5%AD%97%E4%BD%93%E5%A4%A7%E5%B0%8F%E5%92%8C%E9%A2%9C%E8%89%B2--fonts-size-and-colors)
 >> 🟠 [字体 | Fonts](https://github.com/Moenupa/InDesign/tree/master/powershell#%E5%AD%97%E4%BD%93--fonts)  
->> 🟡 [大小 | Size](TODO:)  
->> 🟢 [颜色 | Color](TODO:)  
->
+>> 🟡 [大小 | Size](https://github.com/Moenupa/InDesign/tree/master/powershell#%E5%A4%A7%E5%B0%8F--size)  
+>> 🟢 [颜色 | Color](https://github.com/Moenupa/InDesign/tree/master/powershell#%E9%A2%9C%E8%89%B2--color)  
 > 🟣 [oh-my-posh 及其自定义 | Powershell Beautifying by oh-my-posh and Personalization](https://github.com/Moenupa/InDesign/tree/master/powershell#oh-my-posh-%E5%8F%8A%E5%85%B6%E8%87%AA%E5%AE%9A%E4%B9%89--powershell-beautifying-by-oh-my-posh-and-personalization)  
 > 🔵
 
@@ -20,23 +19,25 @@
 
 常用的有以下几种（优先度由高到低）Common Fonts (Highly-to-Poorly Recommended)
 
-- Sarasa Mono [ⓘ](TODO:)
+灰色字符代表无法显示。 Grey characters represent non-supports.
+
+- [Sarasa Mono](https://github.com/be5invis/Sarasa-Gothic) [<sup>ⓘ</sup>](TODO:)
 
 ![特点：支持UTF32 Feature: UTF32 Support](https://github.com/Moenupa/InDesign/blob/master/src/fonts/sarasa_mono.png)
 
-- Fira Code [ⓘ](TODO:)
+- [Fira Code](https://github.com/tonsky/FiraCode) [<sup>ⓘ</sup>](TODO:)
 
 ![特点：合字 Feature: Ligature](https://github.com/Moenupa/InDesign/blob/master/src/fonts/fira_code.png)
 
-- Source Code Pro [ⓘ](TODO:)
+- [Source Code Pro](https://github.com/adobe-fonts/source-code-pro) [<sup>ⓘ</sup>](TODO:)
 
 ![特点：圆滑整洁 Feature: Tidy](https://github.com/Moenupa/InDesign/blob/master/src/fonts/source_code_pro.png)
 
-- Consolas [ⓘ](TODO:)
+- Consolas
 
 ![特点：美观且普适 Feature: Clean and Widespread](https://github.com/Moenupa/InDesign/blob/master/src/fonts/consolas.png)
 
-- Courier New [ⓘ](TODO:)
+- Courier New
 
 ![特点：万物可用 Feature: Universal](https://github.com/Moenupa/InDesign/blob/master/src/fonts/courier_new.png)
 
@@ -57,5 +58,23 @@ TODO:
 TODO:
 
 ## oh-my-posh 及其自定义 | Powershell Beautifying by oh-my-posh and Personalization
+
+在 PowerShell 以管理员执行以下代码： | Run the following commands using PowerShell (run as admin)
+
+```powershell
+
+Set-ExecutionPolicy RemoteSigned   # 解除限制
+
+Install-Module posh-git            # 安装 posh-git
+Install-Module oh-my-posh          # 安装 oh-my-posh
+
+notepad $PROFILE                   # 用记事本修改 $PROFILE 文件   edit $PROFILE
+
+```
+
+> In the *$PROFILE* file:  
+> Import-Module posh-git  
+> Import-Module ph-my-posh  
+> Set-Theme OneMore
 
 原链接 Original link: [oh-my-posh on Github](https://github.com/JanDeDobbeleer/oh-my-posh)
