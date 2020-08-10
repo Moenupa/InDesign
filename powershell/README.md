@@ -7,7 +7,7 @@
 >> 🟡 [大小 | Size](https://github.com/Moenupa/InDesign/tree/master/powershell#%E5%A4%A7%E5%B0%8F--size)  
 >> 🟢 [颜色 | Color](https://github.com/Moenupa/InDesign/tree/master/powershell#%E9%A2%9C%E8%89%B2--color)  
 > 🟣 [oh-my-posh 及其自定义 | Powershell Beautifying by oh-my-posh and Personalization](https://github.com/Moenupa/InDesign/tree/master/powershell#oh-my-posh-%E5%8F%8A%E5%85%B6%E8%87%AA%E5%AE%9A%E4%B9%89--powershell-beautifying-by-oh-my-posh-and-personalization)  
-> 🔵
+> 🔵 [效果演示 | Demo]()
 
 ## 字体，字体大小和颜色 | Fonts, Size and Colors
 
@@ -51,7 +51,7 @@ The font recommendation and analysis can is valuable to all terminal configurati
 
 ### 大小 | Size
 
-TODO:
+字号一般显示为 12
 
 ### 颜色 | Color
 
@@ -78,3 +78,9 @@ notepad $PROFILE                   # 用记事本修改 $PROFILE 文件   edit $
 > Set-Theme OneMore
 
 原链接 Original link: [oh-my-posh on Github](https://github.com/JanDeDobbeleer/oh-my-posh)
+
+## oh-my-posh 优化效果 | Powershell Beautifying Effects by oh-my-posh
+
+![oh-my-posh effects demo1](https://github.com/Moenupa/InDesign/blob/master/src/demo/powershell_demo.png)
+
+![oh-my-posh effects demo2](https://github.com/Moenupa/InDesign/blob/master/src/demo/powershell_terminal_demo.png)
