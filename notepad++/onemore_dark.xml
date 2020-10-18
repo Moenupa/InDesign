@@ -702,8 +702,8 @@
     </LexerStyles>
     <GlobalStyles>
         <!-- Attention : Don't modify the name of styleID="0" -->
-        <WidgetStyle name="Global override" styleID="0" fgColor="D4D4D4" bgColor="1E1E1E" fontName="Sarasa Mono T TC" fontStyle="0" fontSize="14" />
-        <WidgetStyle name="Default Style" styleID="32" fgColor="D4D4D4" bgColor="1E1E1E" fontName="Sarasa Mono T TC" fontStyle="0" fontSize="14" />
+        <WidgetStyle name="Global override" styleID="0" fgColor="D4D4D4" bgColor="1E1E1E" fontName="Sarasa Mono T TC" fontStyle="0" fontSize="12" />
+        <WidgetStyle name="Default Style" styleID="32" fgColor="D4D4D4" bgColor="1E1E1E" fontName="Sarasa Mono T TC" fontStyle="0" fontSize="12" />
         <WidgetStyle name="Indent guideline style" styleID="37" fgColor="999999" bgColor="1E1E1E" fontName="" fontStyle="0" fontSize="" />
         <WidgetStyle name="Brace highlight style" styleID="34" fgColor="FFE680" bgColor="1E1E1E" fontName="" fontStyle="1" fontSize="" />
         <WidgetStyle name="Bad brace colour" styleID="35" fgColor="CC6666" bgColor="1E1E1E" fontName="" fontStyle="0" fontSize="" />
@@ -713,7 +713,7 @@
         <WidgetStyle name="Caret colour" styleID="2069" fgColor="999999" />
         <WidgetStyle name="Find Mark Style" styleID="31" fgColor="CC6666" bgColor="FFE680" fontName="" fontStyle="0" fontSize="" />
         <WidgetStyle name="Edge colour" styleID="0" fgColor="D4D4D4" />
-        <WidgetStyle name="Line number margin" styleID="33" fgColor="D4D4D4" bgColor="252526" fontName="" fontStyle="0" fontSize="12" />
+        <WidgetStyle name="Line number margin" styleID="33" fgColor="D4D4D4" bgColor="252526" fontName="" fontStyle="0" fontSize="10" />
         <WidgetStyle name="Fold" styleID="0" fgColor="252526" bgColor="D4D4D4" />
         <WidgetStyle name="Fold margin" styleID="0" fgColor="666666" bgColor="252526" />
         <WidgetStyle name="White space symbol" styleID="0" fgColor="FFE680" />
