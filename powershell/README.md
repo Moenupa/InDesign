@@ -72,10 +72,13 @@ notepad $PROFILE                   # 用记事本修改 $PROFILE 文件   edit $
 
 ```
 
-> In the *$PROFILE* file:  
-> Import-Module posh-git  
-> Import-Module ph-my-posh  
-> Set-Theme OneMore
+In the `$PROFILE` file:  
+
+```powershell
+Import-Module posh-git  
+Import-Module ph-my-posh  
+Set-Theme OneMore
+```
 
 原链接 Original link: [oh-my-posh on Github](https://github.com/JanDeDobbeleer/oh-my-posh)
 
