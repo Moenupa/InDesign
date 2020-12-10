@@ -21,12 +21,12 @@
         "defaults":
         {
 			"fontFace": "Sarasa Mono T TC",
-			"fontSize": 14,
+			"fontSize": 12,
 			"backgroundImage": "C:\\GitHub\\InDesign\\src\\pics\\om_dark_x128.png",
 			"backgroundImageAlignment": "center",
 			"backgroundImageStretchMode": "none",
 			"backgroundImageOpacity": 0.25,
-			"colorScheme": "One More Dark",
+			"colorScheme": "OneMore Dark",
             "closeOnExit": true,
             "cursorShape": "emptyBox"
         },
@@ -70,33 +70,65 @@
     },
 
     "schemes": [
-		{
-            "name": "One More Dark",
+        {
+            "name": "OneMore Dark",
 
             "foreground": "#D4D4D4",
             "background": "#1E1E1E",
 
             "cursorColor": "#FFFFFF",
-            "selectionBackground": "#D4D4D4",
+            "selectionBackground": "#CCCCCC",
 
-            "black": "#1E1E1E",
+            "black": "#333333",
             "red": "#CC6666",
             "green": "#8FCC66",
             "yellow": "#CCB866",
-            "blue": "#66B8CC",
+            "blue": "#66A3CC",
             "purple": "#B866CC",
-            "cyan": "#66CCB8",
+            "cyan": "#66CCA3",
             "white": "#999999",
+            // HSL $$ 50 80
 
             "brightBlack": "#666666",
             "brightRed": "#FF8080",
             "brightGreen": "#B2FF80",
             "brightYellow": "#FFE680",
-            "brightBlue": "#80E5FF",
+            "brightBlue": "#80CCFF",
             "brightPurple": "#E680FF",
-            "brightCyan": "#80FFE5",
+            "brightCyan": "#80FFCC",
             "brightWhite": "#EFEFEF"
-        }
+            // HSL $$ 50 100
+        },
+        {
+            "name": "OneMore Light",
+
+            "foreground": "#333333",
+            "background": "#EFEFEF",
+
+            "cursorColor": "#000000",
+            "selectionBackground": "#1E1E1E",
+
+            "black": "#1E1E1E",
+            "red": "#992E2E",
+            "green": "#59992E",
+            "yellow": "#99842E",
+            "blue": "#2E6E99",
+            "purple": "#842E99",
+            "cyan": "#2E996E",
+            "white": "#999999",
+            // HSL $$ 70 60
+
+            "brightBlack": "#666666",
+            "brightRed": "#B22424",
+            "brightGreen": "#5DB224",
+            "brightYellow": "#B29624",
+            "brightBlue": "#2479B2",
+            "brightPurple": "#9624B2",
+            "brightCyan": "#24B279",
+            "brightWhite": "#DDDDDD",
+            // HSL $$ 80 70
+
+        },
 	],
 
     "keybindings": []
