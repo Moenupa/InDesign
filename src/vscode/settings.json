@@ -18,7 +18,6 @@
     "editor.acceptSuggestionOnEnter": "off",
     "git.confirmSync": false,
     "explorer.confirmDragAndDrop": false,
-    "python.jediEnabled": false,
     "editor.wordWrap": "on",
     "editor.defaultFormatter": "vscode.configuration-editing",
     "editor.hideCursorInOverviewRuler": true,
@@ -29,6 +28,7 @@
     "editor.cursorSmoothCaretAnimation": true,
     "editor.cursorStyle": "block-outline",
     "editor.quickSuggestionsDelay": 100,
+    "editor.insertSpaces": true,
     "files.trimFinalNewlines": true,
     "workbench.enableExperiments": false,
     "workbench.colorTheme": "Visual Studio Dark",
@@ -51,26 +51,36 @@
     "markdownlint.config": {
         "MD025": {
             "front_matter_title": ""
-        }
+        },
+        "MD028": false
     },
     "editor.fontFamily": "Sarasa Mono T TC",
     "explorer.confirmDelete": false,
     "workbench.colorCustomizations": {
-        "terminal.ansiBlack": "#000000",
-		"terminal.ansiBlue": "#66B8CC",
-		"terminal.ansiBrightBlack": "#666666",
-		"terminal.ansiBrightBlue": "#80E5FF",
-		"terminal.ansiBrightCyan": "#80FFE5",
-		"terminal.ansiBrightGreen": "#B2FF80",
-		"terminal.ansiBrightMagenta": "#E680FF",
-		"terminal.ansiBrightRed": "#FF8080",
-		"terminal.ansiBrightWhite": "#EFEFEF",
-		"terminal.ansiBrightYellow": "#FFE680",
-		"terminal.ansiCyan": "#66CCB8",
-		"terminal.ansiGreen": "#8FCC66",
-		"terminal.ansiMagenta": "#B866CC",
-		"terminal.ansiRed": "#CC6666",
-		"terminal.ansiWhite": "#999999",
-        "terminal.ansiYellow": "#CCB866"
+        "terminal.ansiBlack": "#1E1E1E",
+        "terminal.ansiBlue": "#66A3CC",
+        "terminal.ansiCyan": "#66CCA3",
+        "terminal.ansiGreen": "#8FCC66",
+        "terminal.ansiMagenta": "#B866CC",
+        "terminal.ansiRed": "#CC6666",
+        "terminal.ansiWhite": "#999999",
+        "terminal.ansiYellow": "#CCB866",
+        "terminal.ansiBrightBlack": "#666666",
+        "terminal.ansiBrightBlue": "#80CCFF",
+        "terminal.ansiBrightCyan": "#80FFCC",
+        "terminal.ansiBrightGreen": "#B2FF80",
+        "terminal.ansiBrightMagenta": "#E680FF",
+        "terminal.ansiBrightRed": "#FF8080",
+        "terminal.ansiBrightWhite": "#EFEFEF",
+        "terminal.ansiBrightYellow": "#FFE680"
+    },
+    "yaml.schemas": {
+        "file:///toc.schema.json": "/toc\\.yml/i"
+    },
+    "python.languageServer": "Microsoft",
+    "java.configuration.checkProjectSettingsExclusions": false,
+    "java.refactor.renameFromFileExplorer": "autoApply",
+    "remote.SSH.remotePlatform": {
+        "192.168.3.12": "linux"
     }
 }

@@ -9,7 +9,7 @@
 ## 路径
 
 > 文件路径 File Directory
-> %AppData%\Local\Packages\Microsoft.WindowsTerminal_8wekyb3d8bbwe\LocalState
+`%AppData%\Local\Packages\Microsoft.WindowsTerminal_8wekyb3d8bbwe\LocalState`
 >
 > 文件 File
-> %AppData%\Local\Packages\Microsoft.WindowsTerminal_8wekyb3d8bbwe\LocalState\settings.json
+`%AppData%\Local\Packages\Microsoft.WindowsTerminal_8wekyb3d8bbwe\LocalState\settings.json`

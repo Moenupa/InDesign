@@ -20,14 +20,14 @@
     {
         "defaults":
         {
-			"fontFace": "Sarasa Mono T TC",
+            "fontFace": "Sarasa Mono T TC",
 			"fontSize": 12,
-			"backgroundImage": "C:\\GitHub\\InDesign\\src\\pics\\om_dark_x128.png",
+			"backgroundImage": "C:\\GitHub\\InDesign\\res\\om_dark_x128.png",
 			"backgroundImageAlignment": "center",
 			"backgroundImageStretchMode": "none",
 			"backgroundImageOpacity": 0.25,
 			"colorScheme": "OneMore Dark",
-            "closeOnExit": true,
+            "closeOnExit": false,
             "cursorShape": "emptyBox"
         },
         "list":
@@ -37,34 +37,51 @@
                 "name": "Windows PowerShell",
                 "startingDirectory": "C:\\Github",
                 "commandline": "powershell.exe",
+                "icon": "C:\\Github\\InDesign\\res\\ico\\Powershell.ico",
+                "hidden": false
+            },
+            {
+                "guid": "{4f81da62-7e97-4566-9613-94c92797097b}",
+                "name": "Windows PowerShell (ADMIN)",
+                "startingDirectory": "C:\\Github",
+                "commandline": "powershell.exe Start-Process -Verb RunAs wt",
+                "icon": "C:\\Github\\InDesign\\res\\ico\\Powershell.ico",
                 "hidden": false
             },
             {
                 "guid": "{0caa0dad-35be-5f56-a8ff-afceeeaa6101}",
-                "name": "cmd",
+                "name": "CMD",
                 "commandline": "cmd.exe",
-                "hidden": false
+                "icon": "C:\\Github\\InDesign\\res\\ico\\Powershell.ico",
+                "hidden": true
             },
 			{
                 "guid": "{60254CA5-953B-11CF-8C96-00AA00B8708C}",
                 "name": "Git",
 				"commandline": "C:\\Program Files\\Git\\bin\\bash.exe",
 				"startingDirectory": "C:\\Github",
-				"icon": "C:\\Program Files\\Git\\mingw64\\share\\git\\git-for-windows.ico"
+				"icon": "C:\\Github\\InDesign\\res\\ico\\Git.ico"
 			},
 			{
-                "guid": "{BEA218D2-6950-497B-9434-61683EC065FE}",
+                "guid": "{0eba5661-6e93-4a3c-9cfb-75a4eb266843}",
                 "name": "Python",
 				"commandline": "C:\\Program Files\\Python\\3.8.2\\python.exe",
 				"startingDirectory": "C:\\Github\\MINEWORLDY",
-				"icon": "C:\\Program Files\\Python\\3.8.2\\DLLs\\pyc.ico"
+				"icon": "C:\\Github\\InDesign\\res\\ico\\Python.ico"
+            },
+            {
+                "guid": "{f471cc06-20ba-4319-aaf0-a4c8b4e3d2c0}",
+                "name": "RPi",
+				"commandline": "powershell.exe ssh pi@192.168.3.12",
+				"icon": "C:\\Github\\InDesign\\res\\ico\\Raspberry.ico"
             },
             {
                 "guid": "{b453ae62-4e3d-5e58-b989-0a998ec441b8}",
                 "hidden": false,
                 "name": "Azure Cloud Shell",
                 "source": "Windows.Terminal.Azure",
-				"closeOnExit": true
+                "closeOnExit": true,
+                "hidden": true
             }
         ]
     },
@@ -79,7 +96,7 @@
             "cursorColor": "#FFFFFF",
             "selectionBackground": "#CCCCCC",
 
-            "black": "#333333",
+            "black": "#1E1E1E",
             "red": "#CC6666",
             "green": "#8FCC66",
             "yellow": "#CCB866",
@@ -125,10 +142,9 @@
             "brightBlue": "#2479B2",
             "brightPurple": "#9624B2",
             "brightCyan": "#24B279",
-            "brightWhite": "#DDDDDD",
+            "brightWhite": "#EFEFEF"
             // HSL $$ 80 70
-
-        },
+        }
 	],
 
     "keybindings": []
