@@ -26,7 +26,7 @@ function Write-Theme {
 
     $path = Get-FullPath -dir $pwd
     if ($path.length -gt 40) {
-        $prompt += Write-Prompt -Object " $($path.Substring(0,18))$($sl.PromptSymbols.TruncatedFolderSymbol)$($path.Substring([int]($path.length-20))) " -ForegroundColor $sl.Colors.PromptHighlightColor -BackgroundColor $sl.Colors.PathBackgroundColor
+        $prompt += Write-Prompt -Object " 📁 $($path.Substring(0,18))$($sl.PromptSymbols.TruncatedFolderSymbol)$($path.Substring([int]($path.length-17))) " -ForegroundColor $sl.Colors.PromptHighlightColor -BackgroundColor $sl.Colors.PathBackgroundColor
     } else {
         $prompt += Write-Prompt -Object " $path " -ForegroundColor $sl.Colors.PromptHighlightColor -BackgroundColor $sl.Colors.PathBackgroundColor
     }
@@ -46,9 +46,9 @@ function Write-Theme {
 
     # time prompt
     $timeStamp = Get-Date -UFormat %R
-    $prompt += Set-CursorForRightBlockWrite -textLength ($timeStamp.Length+2)
-    $prompt += Write-Prompt -Object "◔ $($timeStamp)" -ForegroundColor $sl.Colors.TimeStampForegroundColor
-
+    $prompt += Set-CursorForRightBlockWrite -textLength ($timeStamp.Length + 3)
+    $prompt += Write-Prompt -Object $sl.PromptSymbols.HourSymbol[(Get-Date).hour%12]
+    $prompt += Write-Prompt -Object " $($timeStamp)" -ForegroundColor $sl.Colors.TimeStampForegroundColor
     $prompt += Set-Newline
 
     if ($with) {
@@ -78,6 +78,7 @@ $sl.PromptSymbols.SuccessCommandSymbol              = [char]::ConvertFromUtf32(0
 $sl.PromptSymbols.TruncatedFolderSymbol             = ".."
 $sl.PromptSymbols.UNCSymbol                         = "§"
 $sl.PromptSymbols.VirtualEnvSymbol                  = "⭓"
+$sl.PromptSymbols.HourSymbol                        = "🕛","🕐","🕑","🕒","🕓","🕔","🕕","🕖","🕗","🕘","🕙","🕚"
 
 $sl.Colors.AdminIconBackgroundColor                     = [ConsoleColor]::DarkBlue, [ConsoleColor]::DarkRed
 $sl.Colors.AdminIconForegroundColor                     = [ConsoleColor]::Black

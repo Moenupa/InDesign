@@ -20,7 +20,7 @@
     {
         "defaults":
         {
-            "fontFace": "Sarasa Mono T TC",
+            "fontFace": "Sarasa Fixed SC",
 			"fontSize": 12,
 			"backgroundImage": "C:\\GitHub\\InDesign\\res\\om_dark_x128.png",
 			"backgroundImageAlignment": "center",
@@ -96,54 +96,52 @@
             "cursorColor": "#FFFFFF",
             "selectionBackground": "#CCCCCC",
 
-            "black": "#1E1E1E",
-            "red": "#CC6666",
-            "green": "#8FCC66",
-            "yellow": "#CCB866",
-            "blue": "#66A3CC",
-            "purple": "#B866CC",
-            "cyan": "#66CCA3",
-            "white": "#999999",
+            "black":        "#1E1E1E",
+            "red":          "#CC6666",
+            "green":        "#8FCC66",
+            "yellow":       "#CCB866",
+            "blue":         "#66A3CC",
+            "purple":       "#B866CC",
+            "cyan":         "#66CCA3",
+            "white":        "#999999",
             // HSL $$ 50 80
 
-            "brightBlack": "#666666",
-            "brightRed": "#FF8080",
-            "brightGreen": "#B2FF80",
+            "brightBlack":  "#666666",
+            "brightRed":    "#FF8080",
+            "brightGreen":  "#B2FF80",
             "brightYellow": "#FFE680",
-            "brightBlue": "#80CCFF",
+            "brightBlue":   "#80CCFF",
             "brightPurple": "#E680FF",
-            "brightCyan": "#80FFCC",
-            "brightWhite": "#EFEFEF"
+            "brightCyan":   "#80FFCC",
+            "brightWhite":  "#EFEFEF"
             // HSL $$ 50 100
         },
         {
             "name": "OneMore Light",
 
-            "foreground": "#333333",
+            "foreground": "#1E1E1E",
             "background": "#EFEFEF",
 
             "cursorColor": "#000000",
-            "selectionBackground": "#1E1E1E",
+            "selectionBackground": "#D4D4D4",
 
-            "black": "#1E1E1E",
-            "red": "#992E2E",
-            "green": "#59992E",
-            "yellow": "#99842E",
-            "blue": "#2E6E99",
-            "purple": "#842E99",
-            "cyan": "#2E996E",
-            "white": "#999999",
-            // HSL $$ 70 60
+            "black":        "#1E1E1E",
+            "red":          "#E64B43",
+            "green":        "#3EAD5A",
+            "yellow":       "#E68F17",
+            "blue":         "#177BE6",
+            "purple":       "#A25CC4",
+            "cyan":         "#67BAE0",
+            "white":        "#999999",
 
-            "brightBlack": "#666666",
-            "brightRed": "#B22424",
-            "brightGreen": "#5DB224",
-            "brightYellow": "#B29624",
-            "brightBlue": "#2479B2",
-            "brightPurple": "#9624B2",
-            "brightCyan": "#24B279",
-            "brightWhite": "#EFEFEF"
-            // HSL $$ 80 70
+            "brightBlack":  "#666666",
+            "brightRed":    "#FF3B30",
+            "brightGreen":  "#34C759",
+            "brightYellow": "#FF9500",
+            "brightBlue":   "#007AFF",
+            "brightPurple": "#AF52DE",
+            "brightCyan":   "#5AC8FA",
+            "brightWhite":  "#EFEFEF"
         }
 	],
 

@@ -7,26 +7,34 @@ function Write-Theme {
         [string]
         $with
     )
+    $lastColor = $sl.Colors.PromptIndicatorColors[0]
+    # - strat connector + start + start - admin connector
+    $prompt += Write-Prompt -Object " " -BackgroundColor $sl.Colors.PromptStartIndicatorColors[0]
 
-    for ($i = 0; $i -lt 3; $i++) {
-        $prompt += Write-Prompt -Object $sl.PromptSymbols.StartSymbol -ForegroundColor $sl.Colors.PromptHighlightColor -BackgroundColor $sl.Colors.PromptStartIndicatorColors[$i]
-    }
+    $prompt += Write-Prompt $sl.PromptSymbols.SegmentBackwardSymbol -ForegroundColor $sl.Colors.PromptStartIndicatorColors[1] -BackgroundColor $sl.Colors.PromptStartIndicatorColors[0]
+    $prompt += Write-Prompt $sl.PromptSymbols.SegmentBackwardSymbol -ForegroundColor $sl.Colors.PromptStartIndicatorColors[2] -BackgroundColor $sl.Colors.PromptStartIndicatorColors[1]
 
-    $prompt += Write-Prompt -Object " $($sl.PromptSymbols.ElevatedSymbol) " -ForegroundColor $sl.Colors.AdminIconForegroundColor -BackgroundColor $sl.Colors.AdminIconBackgroundColor[[int](Test-Administrator)]
+    # Admin Prompt
+    $lastColor = $sl.Colors.AdminIconBackgroundColor[[int](Test-Administrator)]
+    $prompt += Write-Prompt $sl.PromptSymbols.SegmentBackwardSymbol -ForegroundColor $lastColor -BackgroundColor $sl.Colors.PromptStartIndicatorColors[2]
+    $prompt += Write-Prompt -Object " $($sl.PromptSymbols.ElevatedSymbol) " -ForegroundColor $sl.Colors.AdminIconForegroundColor -BackgroundColor $lastColor
 
     # user@computer prompt
     $user = [System.Environment]::UserName
     $computer = [System.Environment]::MachineName
     if (Test-NotDefaultUser($user)) {
+        $prompt += Write-Prompt -Object $sl.PromptSymbols.SegmentBackwardSymbol -ForegroundColor $sl.Colors.PromptBackgroundColor -BackgroundColor $lastColor
         $prompt += Write-Prompt -Object " $user@$computer " -ForegroundColor $sl.Colors.PromptForegroundColor -BackgroundColor $sl.Colors.PromptBackgroundColor
     }
     if (Test-VirtualEnv) {
-        $prompt += Write-Prompt -Object " $($sl.PromptSymbols.VirtualEnvSymbol) $(Get-VirtualEnvName) " -ForegroundColor $sl.Colors.VirtualEnvForegroundColor -BackgroundColor $sl.Colors.VirtualEnvBackgroundColor
+        $prompt += Write-Prompt -Object $sl.PromptSymbols.SegmentBackwardSymbol -ForegroundColor $sl.Colors.VirtualEnvBackgroundColor -BackgroundColor $lastColor
+        $prompt += Write-Prompt -Object " $($sl.PromptSymbols.VirtualEnvSymbol) $(Get-VirtualEnvName) " -ForegroundColor $sl.Colors.PromptForegroundColor -BackgroundColor $sl.Colors.VirtualEnvBackgroundColor
     }
+    $prompt += Write-Prompt -Object $sl.PromptSymbols.SegmentBackwardSymbol -ForegroundColor $sl.Colors.PathBackgroundColor -BackgroundColor $sl.Colors.PromptBackgroundColor
 
     $path = Get-FullPath -dir $pwd
     if ($path.length -gt 40) {
-        $prompt += Write-Prompt -Object " $($path.Substring(0,18))$($sl.PromptSymbols.TruncatedFolderSymbol)$($path.Substring([int]($path.length-20))) " -ForegroundColor $sl.Colors.PromptHighlightColor -BackgroundColor $sl.Colors.PathBackgroundColor
+        $prompt += Write-Prompt -Object " $($path.Substring(0,18))$($sl.PromptSymbols.TruncatedFolderSymbol)$($path.Substring([int]($path.length-16))) " -ForegroundColor $sl.Colors.PromptHighlightColor -BackgroundColor $sl.Colors.PathBackgroundColor
     } else {
         $prompt += Write-Prompt -Object " $path " -ForegroundColor $sl.Colors.PromptHighlightColor -BackgroundColor $sl.Colors.PathBackgroundColor
     }
@@ -35,7 +43,14 @@ function Write-Theme {
     $status = Get-VCSStatus
     if ($status) {
         $themeInfo = Get-VcsInfo -status ($status)
+
+        $prompt += Write-Prompt -Object $sl.PromptSymbols.SegmentBackwardSymbol -ForegroundColor $themeInfo.BackgroundColor -BackgroundColor $sl.Colors.PathBackgroundColor
+        
         $prompt += Write-Prompt -Object " $($themeInfo.VcInfo) " -BackgroundColor $themeInfo.BackgroundColor -ForegroundColor $sl.Colors.GitForegroundColor
+
+        $prompt += Write-Prompt -Object $sl.PromptSymbols.SegmentBackwardSymbol -ForegroundColor $sl.Colors.PromptBackgroundColor -BackgroundColor $themeInfo.BackgroundColor
+    } else {
+        $prompt += Write-Prompt -Object $sl.PromptSymbols.SegmentBackwardSymbol -ForegroundColor $sl.Colors.PromptBackgroundColor -BackgroundColor $sl.Colors.PathBackgroundColor
     }
 
     if ($lastCommandFailed) {
@@ -43,6 +58,7 @@ function Write-Theme {
     } else {
         $prompt += Write-Prompt -Object " $($sl.PromptSymbols.SuccessCommandSymbol) " -ForegroundColor $sl.Colors.CommandSuccessIconForegroundColor -BackgroundColor $sl.Colors.PromptBackgroundColor
     }
+    $prompt += Write-Prompt -Object $sl.PromptSymbols.SegmentForwardSymbol -ForegroundColor $sl.Colors.PromptBackgroundColor
 
     # time prompt
     $timeStamp = Get-Date -UFormat %R
@@ -52,12 +68,12 @@ function Write-Theme {
     $prompt += Set-Newline
 
     if ($with) {
-        $prompt += Write-Prompt -Object "$($with.ToUpper()) " -BackgroundColor $sl.Colors.WithBackgroundColor -ForegroundColor $sl.Colors.PromptForegroundColor
+        $prompt += Write-Prompt -Object "$($with.ToUpper()) " -ForegroundColor $sl.Colors.WithForegroundColor -BackgroundColor $sl.Colors.WithBackgroundColor
     }
-    
-    for ($i = 0; $i -lt 3; $i++) {
-        $prompt += Write-Prompt -Object $sl.PromptSymbols.PromptIndicator -ForegroundColor $sl.Colors.PromptIndicatorColors[$i]
-    }
+    $prompt += Write-Prompt -Object "  " -BackgroundColor $sl.Colors.PromptIndicatorColors[0]
+    $prompt += Write-Prompt -Object $sl.PromptSymbols.SegmentForwardSymbol -ForegroundColor $sl.Colors.PromptIndicatorColors[0] -BackgroundColor $sl.Colors.PromptIndicatorColors[1]
+    $prompt += Write-Prompt -Object $sl.PromptSymbols.SegmentForwardSymbol -ForegroundColor $sl.Colors.PromptIndicatorColors[1] -BackgroundColor $sl.Colors.PromptIndicatorColors[2]
+    $prompt += Write-Prompt -Object $sl.PromptSymbols.SegmentForwardSymbol -ForegroundColor $sl.Colors.PromptIndicatorColors[2]
     $prompt += ' '
     $prompt
 }
