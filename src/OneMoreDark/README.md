@@ -123,4 +123,4 @@ Colors are almost **evenly spread** around the color wheel to be easily distingu
 
 ## Sample Application
 
-![Windows Terminal](https://github.com/Moenupa/InDesign/tree/master/res/demo/OneMoreDark/OneMoreDark_WT.png)
+![Windows Terminal](https://github.com/Moenupa/InDesign/blob/master/res/demo/OneMoreDark/OneMoreDark_WT.png)

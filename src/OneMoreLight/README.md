@@ -8,4 +8,4 @@ TODO:
 
 ## Sample Application
 
-![Windows Terminal](https://github.com/Moenupa/InDesign/tree/master/res/demo/OneMoreLight/OneMoreLight_WT.png)
+![Windows Terminal](https://github.com/Moenupa/InDesign/blob/master/res/demo/OneMoreDark/OneMoreLight_WT.png)
