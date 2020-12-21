@@ -1,0 +1,38 @@
+// For documentation on these settings, see: https://aka.ms/terminal-documentation
+
+{
+    "$schema": "https://aka.ms/terminal-profiles-schema",
+    "profiles":{},
+
+    "schemes": [
+        {
+            "name":                 "OneMore Light",
+
+            "foreground":           "#1E1E1E",
+            "background":           "#EFEFEF",
+
+            "cursorColor":          "#000000",
+            "selectionBackground":  "#D4D4D4",
+
+            "black":                "#1E1E1E",
+            "red":                  "#E64B43",
+            "green":                "#3EAD5A",
+            "yellow":               "#E68F17",
+            "blue":                 "#177BE6",
+            "purple":               "#A25CC4",
+            "cyan":                 "#67BAE0",
+            "white":                "#999999",
+
+            "brightBlack":          "#666666",
+            "brightRed":            "#FF3B30",
+            "brightGreen":          "#34C759",
+            "brightYellow":         "#FF9500",
+            "brightBlue":           "#007AFF",
+            "brightPurple":         "#AF52DE",
+            "brightCyan":           "#5AC8FA",
+            "brightWhite":          "#EFEFEF"
+        }
+    ],
+
+    "keybindings": []
+}
