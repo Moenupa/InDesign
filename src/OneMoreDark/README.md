@@ -18,7 +18,7 @@ Colors are almost **evenly spread** around the color wheel to be easily distingu
 | White |   Gray   | ![#EFEFEF](https://github.com/Moenupa/InDesign/blob/master/res/demo/OneMoreDark/EFEFEF.png)![#999999](https://github.com/Moenupa/InDesign/blob/master/res/demo/OneMoreDark/999999.png) |
 | Black | DarkGray | ![#1E1E1E](https://github.com/Moenupa/InDesign/blob/master/res/demo/OneMoreDark/1E1E1E.png)![#666666](https://github.com/Moenupa/InDesign/blob/master/res/demo/OneMoreDark/666666.png) |
 | Red | DarkRed | ![#FF8080](https://github.com/Moenupa/InDesign/blob/master/res/demo/OneMoreDark/FF8080.png)![#CC6666](https://github.com/Moenupa/InDesign/blob/master/res/demo/OneMoreDark/CC6666.png) |
-|Green|DarkGreen|![#B2FF80](https://github.com/Moenupa/InDesign/blob/master/res/demo/OneMoreDark/B2FF80.png)![#BFCC66](https://github.com/Moenupa/InDesign/blob/master/res/demo/OneMoreDark/BFCC66.png) |
+|Green|DarkGreen|![#B2FF80](https://github.com/Moenupa/InDesign/blob/master/res/demo/OneMoreDark/B2FF80.png)![#8FCC66](https://github.com/Moenupa/InDesign/blob/master/res/demo/OneMoreDark/8FCC66.png) |
 |Yellow|DarkYellow|![#FFE680](https://github.com/Moenupa/InDesign/blob/master/res/demo/OneMoreDark/FFE680.png)![#CCB866](https://github.com/Moenupa/InDesign/blob/master/res/demo/OneMoreDark/CCB866.png)|
 |Blue|DarkBlue|![#80CCFF](https://github.com/Moenupa/InDesign/blob/master/res/demo/OneMoreDark/80CCFF.png)![#66A3CC](https://github.com/Moenupa/InDesign/blob/master/res/demo/OneMoreDark/66A3CC.png)|
 |Magenta|DarkMagenta|![#E680FF](https://github.com/Moenupa/InDesign/blob/master/res/demo/OneMoreDark/E680FF.png)![#B866CC](https://github.com/Moenupa/InDesign/blob/master/res/demo/OneMoreDark/B866CC.png)|
