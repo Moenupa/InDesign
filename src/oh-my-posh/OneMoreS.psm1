@@ -95,6 +95,8 @@ $sl.PromptSymbols.TruncatedFolderSymbol             = ".."
 $sl.PromptSymbols.UNCSymbol                         = "§"
 $sl.PromptSymbols.VirtualEnvSymbol                  = "⭓"
 
+$sl.GitSymbols.BranchSymbol                         = [char]::ConvertFromUtf32(0xe0a0)
+
 $sl.Colors.AdminIconBackgroundColor                     = [ConsoleColor]::DarkBlue, [ConsoleColor]::DarkRed
 $sl.Colors.AdminIconForegroundColor                     = [ConsoleColor]::Black
 $sl.Colors.CommandFailedIconForegroundColor             = [ConsoleColor]::Red

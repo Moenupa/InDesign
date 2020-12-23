@@ -1,4 +1,5 @@
 ﻿#requires -Version 2 -Modules posh-git
+# warning: this profile depends on a Nerd font to display
 
 function Write-Theme {
     param(
@@ -12,7 +13,9 @@ function Write-Theme {
         $prompt += Write-Prompt -Object $sl.PromptSymbols.StartSymbol -ForegroundColor $sl.Colors.PromptHighlightColor -BackgroundColor $sl.Colors.PromptStartIndicatorColors[$i]
     }
 
-    $prompt += Write-Prompt -Object " $($sl.PromptSymbols.ElevatedSymbol) " -ForegroundColor $sl.Colors.AdminIconForegroundColor -BackgroundColor $sl.Colors.AdminIconBackgroundColor[[int](Test-Administrator)]
+    $prompt += Write-Prompt -Object " " -BackgroundColor $sl.Colors.AdminIconBackgroundColor[[int](Test-Administrator)]
+    $prompt += Write-Prompt -Object $sl.PromptSymbols.ElevatedSymbol -ForegroundColor $sl.Colors.AdminIconForegroundColor -BackgroundColor $sl.Colors.AdminIconBackgroundColor[[int](Test-Administrator)]
+    $prompt += Write-Prompt -Object " " -BackgroundColor $sl.Colors.AdminIconBackgroundColor[[int](Test-Administrator)]
 
     # user@computer prompt
     $user = [System.Environment]::UserName
@@ -24,9 +27,10 @@ function Write-Theme {
         $prompt += Write-Prompt -Object " $($sl.PromptSymbols.VirtualEnvSymbol) $(Get-VirtualEnvName) " -ForegroundColor $sl.Colors.VirtualEnvForegroundColor -BackgroundColor $sl.Colors.VirtualEnvBackgroundColor
     }
 
+    $prompt += Write-Prompt -Object " $($sl.PromptSymbols.FolderSymbol)" -ForegroundColor $sl.Colors.PromptHighlightColor -BackgroundColor $sl.Colors.PathBackgroundColor
     $path = Get-FullPath -dir $pwd
     if ($path.length -gt 40) {
-        $prompt += Write-Prompt -Object " 📁 $($path.Substring(0,18))$($sl.PromptSymbols.TruncatedFolderSymbol)$($path.Substring([int]($path.length-17))) " -ForegroundColor $sl.Colors.PromptHighlightColor -BackgroundColor $sl.Colors.PathBackgroundColor
+        $prompt += Write-Prompt -Object " $($path.Substring(0,18))$($sl.PromptSymbols.TruncatedFolderSymbol)$($path.Substring([int]($path.length-17))) " -ForegroundColor $sl.Colors.PromptHighlightColor -BackgroundColor $sl.Colors.PathBackgroundColor
     } else {
         $prompt += Write-Prompt -Object " $path " -ForegroundColor $sl.Colors.PromptHighlightColor -BackgroundColor $sl.Colors.PathBackgroundColor
     }
@@ -64,21 +68,24 @@ function Write-Theme {
 
 $sl = $global:ThemeSettings #local settings
 
-$sl.PromptSymbols.ElevatedSymbol                    = [char]::ConvertFromUtf32(0x236C) # "⍬"
-$sl.PromptSymbols.FailedCommandSymbol               = [char]::ConvertFromUtf32(0x2718) # "✘"
+$sl.PromptSymbols.ElevatedSymbol                    = [char]::ConvertFromUtf32(0xe752)
+$sl.PromptSymbols.FailedCommandSymbol               = [char]::ConvertFromUtf32(0xf658)
 $sl.PromptSymbols.HomeSymbol                        = [char]::ConvertFromUtf32(0x2053) # "~"
 $sl.PromptSymbols.PathSeparator                     = [char]::ConvertFromUtf32(0x005C) # "\"
-$sl.PromptSymbols.PromptIndicator                   = [char]::ConvertFromUtf32(0x276F) # "❯"
+$sl.PromptSymbols.PromptIndicator                   = [char]::ConvertFromUtf32(0xf0da) # "❯"
 $sl.PromptSymbols.SegmentForwardSymbol              = [char]::ConvertFromUtf32(0xE0B0) # ""
 $sl.PromptSymbols.SegmentBackwardSymbol             = [char]::ConvertFromUtf32(0xE0B2) # ""
 $sl.PromptSymbols.SegmentSeparatorForwardSymbol     = [char]::ConvertFromUtf32(0xE0B1) # ""
 $sl.PromptSymbols.SegmentSeparatorBackwardSymbol    = [char]::ConvertFromUtf32(0xE0B3) # ""
-$sl.PromptSymbols.StartSymbol                       = [char]::ConvertFromUtf32(0x276E) # "❮"
-$sl.PromptSymbols.SuccessCommandSymbol              = [char]::ConvertFromUtf32(0x2714) # "✔"
+$sl.PromptSymbols.StartSymbol                       = [char]::ConvertFromUtf32(0xf0d9)
+$sl.PromptSymbols.SuccessCommandSymbol              = [char]::ConvertFromUtf32(0xf632)
 $sl.PromptSymbols.TruncatedFolderSymbol             = ".."
 $sl.PromptSymbols.UNCSymbol                         = "§"
-$sl.PromptSymbols.VirtualEnvSymbol                  = "⭓"
+$sl.PromptSymbols.VirtualEnvSymbol                  = [char]::ConvertFromUtf32(0xfc15) # "⭓"
+$sl.PromptSymbols.FolderSymbol                      = [char]::ConvertFromUtf32(0xe5ff)
 $sl.PromptSymbols.HourSymbol                        = "🕛","🕐","🕑","🕒","🕓","🕔","🕕","🕖","🕗","🕘","🕙","🕚"
+
+$sl.GitSymbols.BranchSymbol                         = [char]::ConvertFromUtf32(0xE725)
 
 $sl.Colors.AdminIconBackgroundColor                     = [ConsoleColor]::DarkBlue, [ConsoleColor]::DarkRed
 $sl.Colors.AdminIconForegroundColor                     = [ConsoleColor]::Black
